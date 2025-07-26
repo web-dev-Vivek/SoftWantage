@@ -24,6 +24,24 @@ function Home() {
       >
         <h1 className="text-5xl">Welcome to Home</h1>
       </section>
+      <section
+        className="min-h-screen flex justify-center items-center bg-green-100"
+        data-scroll-section
+      >
+        <h1 className="text-5xl">Welcome to Home</h1>
+      </section>
+      <section
+        className="min-h-screen flex justify-center items-center bg-green-100"
+        data-scroll-section
+      >
+        <h1 className="text-5xl">Welcome to Home</h1>
+      </section>
+      <section
+        className="min-h-screen flex justify-center items-center bg-green-100"
+        data-scroll-section
+      >
+        <h1 className="text-5xl">Welcome to Home</h1>
+      </section>
     </div>
   );
 }

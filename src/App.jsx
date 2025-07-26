@@ -7,28 +7,15 @@ import Career from "./Pages/Career";
 import TalentDevelopment from "./Pages/Talentdevlopment";
 import SoftwareSolution from "./Pages/Softwaresolution";
 import Contact from "./Pages/Contact";
-
-const Navbar = () => (
-  <header className="fixed top-0 w-full z-50 bg-white shadow-md p-4 flex justify-between">
-    <h1 className="text-xl font-bold">MySite</h1>
-    <nav className="flex space-x-6">
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/career">Career</Link>
-      <Link to="/talent-development">Talent Development</Link>
-      <Link to="/software-solution">Software Solution</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
-  </header>
-);
+import Header from "./Pages/Header.jsx";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Header />
       <main className="pt-24">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Career />} />
           <Route path="/talent-development" element={<TalentDevelopment />} />
