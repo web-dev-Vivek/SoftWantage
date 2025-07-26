@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import Homeimage from "../assets/HB.jpg";
 
 function Home() {
   const scrollRef = useRef(null);
@@ -19,28 +20,15 @@ function Home() {
   return (
     <div data-scroll-container ref={scrollRef} className="font-sans">
       <section
-        className="min-h-screen flex justify-center items-center bg-green-100"
+        className="min-h-screen w-full flex justify-center items-start bg-green-100"
         data-scroll-section
       >
-        <h1 className="text-5xl">Welcome to Home</h1>
-      </section>
-      <section
-        className="min-h-screen flex justify-center items-center bg-green-100"
-        data-scroll-section
-      >
-        <h1 className="text-5xl">Welcome to Home</h1>
-      </section>
-      <section
-        className="min-h-screen flex justify-center items-center bg-green-100"
-        data-scroll-section
-      >
-        <h1 className="text-5xl">Welcome to Home</h1>
-      </section>
-      <section
-        className="min-h-screen flex justify-center items-center bg-green-100"
-        data-scroll-section
-      >
-        <h1 className="text-5xl">Welcome to Home</h1>
+        <div
+          style={{ backgroundImage: `url(${Homeimage})` }}
+          className="md:w-[100vw] bg-red-600 md:h-[90vh]"
+        >
+          hi
+        </div>
       </section>
     </div>
   );

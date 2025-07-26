@@ -3,15 +3,26 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="fixed top-0 w-full z-50 bg-white shadow-md p-4 flex justify-between">
-      <h1 className="text-xl font-bold">MySite</h1>
-      <nav className="flex space-x-6">
-        <Link to="/home">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/career">Career</Link>
-        <Link to="/talent-development">Talent Development</Link>
-        <Link to="/software-solution">Software Solution</Link>
-        <Link to="/contact">Contact</Link>
+    <header className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-md rounded-full w-[90vw] md:w-[50vw] h-[10vh] z-50 flex justify-center items-center shadow-lg">
+      <nav className="flex flex-wrap gap-4 md:gap-6 text-black font-semibold text-sm md:text-base">
+        <Link className="" to="/">
+          Home
+        </Link>
+        <Link className="border-l-1 pl-5" to="/about">
+          About
+        </Link>
+        <Link className="border-l-1 pl-5" to="/career">
+          Career
+        </Link>
+        <Link className="border-l-1 pl-5" to="/talent-development">
+          Talent
+        </Link>
+        <Link className="border-l-1 pl-5" to="/software-solution">
+          Software
+        </Link>
+        <Link className="border-l-1 pl-5" to="/contact">
+          Contact
+        </Link>
       </nav>
     </header>
   );

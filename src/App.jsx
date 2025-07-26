@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Career from "./Pages/Career";
@@ -12,10 +13,13 @@ import Header from "./Pages/Header.jsx";
 function App() {
   return (
     <Router>
+      {/* ✅ Header component Routes ke bahar hona chahiye */}
       <Header />
-      <main className="pt-24">
+
+      {/* ✅ Page routes */}
+      <main>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Career />} />
           <Route path="/talent-development" element={<TalentDevelopment />} />
