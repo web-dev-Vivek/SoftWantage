@@ -19,16 +19,60 @@ function Home() {
 
   return (
     <div data-scroll-container ref={scrollRef} className="font-sans">
+      {/* Hero Section */}
       <section
-        className="min-h-screen w-full flex justify-center items-start bg-green-100"
+        className="min-h-full w-full flex justify-center items-start"
         data-scroll-section
       >
+        {/* Background Image with overlay content */}
         <div
-          style={{ backgroundImage: `url(${Homeimage})` }}
-          className="md:w-[100vw] bg-red-600 md:h-[90vh]"
+          style={{
+            backgroundImage: `url(${Homeimage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="
+            w-full h-[100vh] flex flex-col justify-center items-center px-6
+            md:h-[90vh] md:px-0
+          "
         >
-          hi
+          {/* Title Text */}
+          <div
+            className="text-center flex flex-row"
+            data-scroll
+            data-scroll-speed="6"
+          >
+            <span
+              className="block text-5xl font-bold md:text-9xl"
+              style={{ color: "rgb(1, 152, 178)" }}
+            >
+              Soft
+            </span>
+            <span
+              className="block text-5xl font-bold md:text-9xl"
+              style={{ color: "rgb(3, 75, 173)" }}
+            >
+              Wantage
+            </span>
+          </div>
+
+          {/* Tagline */}
+          <p
+            className="mt-4 text-sm font-semibold text-blue-600 md:text-xl"
+            data-scroll
+            data-scroll-speed="6"
+          >
+            We Build Software | We Shape Talent
+          </p>
         </div>
+      </section>
+
+      {/* Second Section – scroll test */}
+      <section
+        className="h-[100vh] w-full flex items-center justify-center text-white text-3xl md:text-5xl bg-blue-500"
+        data-scroll-section
+      >
+        Hello 👋
       </section>
     </div>
   );
