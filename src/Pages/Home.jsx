@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import BgVideo from "../assets/bgv.mp4";
 import Image1 from "../assets/image1.jpeg";
+import Bg from "../assets/HB.jpg";
 
 function Home() {
   const scrollRef = useRef(null);
@@ -13,6 +13,12 @@ function Home() {
       el: scrollRef.current,
       smooth: true,
     });
+
+    // Refresh after a short delay to ensure all content is loaded
+    setTimeout(() => {
+      if (locoScroll.current) locoScroll.current.update();
+    }, 1500); // increased delay for better sync with media loads
+
     return () => {
       if (locoScroll.current) locoScroll.current.destroy();
     };
@@ -22,43 +28,45 @@ function Home() {
     <div data-scroll-container ref={scrollRef} className="font-sans">
       {/* Hero Section */}
       <section
-        className="relative w-full h-[100vh] md:h-[90vh] flex items-center justify-center overflow-hidden"
+        className="relative w-full h-[50vh] md:h-[90vh] flex items-center justify-center overflow-hidden"
         data-scroll-section
       >
-        {/* Background Video */}
-        <video
+        {/* Background Image */}
+        <img
+          src={Bg}
+          alt="Background"
           className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src={BgVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        />
 
-        {/* Overlay (optional for dark filter) */}
+        {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full z-0"></div>
 
-        {/* Content on top of video */}
+        {/* Content */}
         <div className="relative z-10 text-center px-4">
           <div
             className="flex flex-col md:flex-row justify-center items-center"
             data-scroll
             data-scroll-speed="6"
           >
-            <span className="text-5xl md:text-9xl font-bold text-[rgb(1,152,178)]">
+            <span
+              style={{ fontFamily: "'Roboto Condensed', sans-serif" }}
+              className="text-5xl md:text-9xl font-bold text-[rgb(1,152,178)]"
+            >
               Soft
             </span>
-            <span className="text-5xl md:text-9xl font-bold text-[rgb(3,75,173)]">
+            <span
+              style={{ fontFamily: "'Roboto Condensed', sans-serif" }}
+              className="text-5xl md:text-9xl font-bold text-[rgb(3,75,173)]"
+            >
               Wantage
             </span>
           </div>
 
           <p
-            className="mt-4 text-sm md:text-xl font-semibold text-blue-500"
+            className="mt-4 md:mt-0 text-sm md:text-xl font-semibold text-blue-500"
             data-scroll
             data-scroll-speed="5"
+            style={{ fontFamily: "'Roboto Condensed', sans-serif" }}
           >
             We Build Software | We Shape Talent
           </p>
@@ -72,14 +80,27 @@ function Home() {
       >
         {/* Text Section */}
         <div className="w-full md:w-[50vw] h-auto md:h-[100vh] flex flex-col justify-evenly md:pl-10 gap-6">
-          <p className="text-black text-center text-xl md:text-4xl">
+          <p
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+            className="text-black text-center text-xl md:text-4xl"
+          >
             Design-led software experiences.
           </p>
-          <h1 className="text-black text-center text-2xl md:text-7xl leading-tight">
+          <h1
+            style={{ fontFamily: "'DM Serif Text', serif" }}
+            className="text-black text-center text-2xl md:text-7xl leading-tight"
+          >
             Real-world talent development programs.
           </h1>
-          <p className="text-black text-center text-xl md:text-4xl">
-            Empowering businesses and individuals to grow.
+          <p
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+            className="text-black text-center text-xl md:text-4xl"
+          >
+            Empowering businesses and{" "}
+            <span className="font-bold  text-[rgb(1,152,178)]">
+              individuals
+            </span>{" "}
+            to grow.
           </p>
         </div>
 
@@ -91,6 +112,14 @@ function Home() {
             alt="SoftWantage visual"
           />
         </div>
+      </section>
+
+      {/* Third Section */}
+      <section
+        className="w-screen min-h-[100vh] bg-red-600 flex items-center justify-center"
+        data-scroll-section
+      >
+        <div className="text-white text-4xl font-bold">hi</div>
       </section>
     </div>
   );
