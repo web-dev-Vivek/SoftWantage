@@ -28,13 +28,13 @@ function Home() {
     <div data-scroll-container ref={scrollRef} className="font-sans">
       {/* Hero Section */}
       <section
-        className="relative w-full h-[50vh] md:h-[90vh] flex items-center justify-center overflow-hidden"
+        className="relative w-full h-[100vh] md:h-[90vh] flex items-center justify-center overflow-hidden"
         data-scroll-section
       >
         {/* Background Image */}
         <img
           src={Bg}
-          alt="Background"
+          alt=""
           className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
         />
 
@@ -75,26 +75,26 @@ function Home() {
 
       {/* Second Section */}
       <section
-        className="h-auto w-full flex flex-col md:flex-row items-center justify-between text-white text-2xl md:text-5xl px-4 md:px-0"
+        className="h-[80vh] md:h-auto w-full flex flex-col md:flex-row items-center justify-between text-white text-2xl md:text-5xl px-4 md:px-0"
         data-scroll-section
       >
         {/* Text Section */}
-        <div className="w-full md:w-[50vw] h-auto md:h-[100vh] flex flex-col justify-evenly md:pl-10 gap-6">
+        <div className="w-full md:w-[50vw] h-[80vh] md:h-[100vh] flex flex-col justify-center md:pl-10 gap-10 md:gap-6">
           <p
             style={{ fontFamily: "'Oswald', sans-serif" }}
-            className="text-black text-center text-xl md:text-4xl"
+            className="text-black text-center text-2xl md:text-4xl"
           >
             Design-led software experiences.
           </p>
           <h1
             style={{ fontFamily: "'DM Serif Text', serif" }}
-            className="text-black text-center text-2xl md:text-7xl leading-tight"
+            className="text-black text-center text-5xl md:text-7xl leading-tight"
           >
             Real-world talent development programs.
           </h1>
           <p
             style={{ fontFamily: "'Oswald', sans-serif" }}
-            className="text-black text-center text-xl md:text-4xl"
+            className="text-black text-center text-2xl md:text-4xl"
           >
             Empowering businesses and{" "}
             <span className="font-bold  text-[rgb(1,152,178)]">
