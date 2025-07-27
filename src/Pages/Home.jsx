@@ -67,7 +67,7 @@ function Home() {
 
       {/* Second Section */}
       <section
-        className="h-auto w-full flex flex-col md:flex-row items-center justify-between text-white text-2xl md:text-5xl px-4 md:px-0 py-10"
+        className="h-auto w-full flex flex-col md:flex-row items-center justify-between text-white text-2xl md:text-5xl px-4 md:px-0"
         data-scroll-section
       >
         {/* Text Section */}
@@ -84,9 +84,9 @@ function Home() {
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:w-[40vw] hidden md:block h-auto md:h-[100vh] mt-10 md:mt-0">
+        <div className="w-full md:w-[40vw] hidden md:block h-auto mt-10 md:mt-0">
           <img
-            className="w-full h-auto object-cover"
+            className="w-full md:h-[100vh]"
             src={Image1}
             alt="SoftWantage visual"
           />
