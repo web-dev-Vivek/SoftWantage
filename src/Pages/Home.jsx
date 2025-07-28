@@ -10,6 +10,10 @@ import Bg from "../assets/HB.jpg";
 import Soft from "../assets/Soft.jpg";
 import Talent from "../assets/Talent.jpg";
 import Footer from "../Pages/Footer.jsx";
+import About from "../assets/About.mp4";
+import SoftwareSolution from "../assets/Software.mp4";
+import Tech from "../assets/Tech.mp4";
+import Contact from "../assets/contact.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +27,6 @@ function Home() {
       smooth: true,
     });
 
-    // Connect Locomotive Scroll to GSAP ScrollTrigger
     ScrollTrigger.scrollerProxy(scrollRef.current, {
       scrollTop(value) {
         return arguments.length
@@ -47,6 +50,12 @@ function Home() {
       locoScroll.current.update()
     );
     ScrollTrigger.refresh();
+
+    // ✅ Fix Footer not appearing
+    setTimeout(() => {
+      locoScroll.current?.update();
+      ScrollTrigger.refresh();
+    }, 1000);
 
     return () => {
       if (locoScroll.current) locoScroll.current.destroy();
@@ -73,8 +82,8 @@ function Home() {
           scrollTrigger: {
             trigger: box,
             scroller: scrollRef.current,
-            start: "top 90%",
-            end: "top 50%",
+            start: "top 160%",
+            end: "top 70%",
             scrub: 2,
           },
         }
@@ -255,30 +264,145 @@ function Home() {
 
       {/* Animated Grid Section */}
       <section
-        className="w-full min-h-screen flex flex-col items-center justify-evenly px-4 py-8"
+        className="w-full min-h-screen flex flex-col items-center justify-evenly font-sans"
         data-scroll-section
       >
-        <div id="option_container" className="w-full max-w-screen-xl">
-          <div className="option-box w-full mb-4 h-[20vh] md:h-[40vh] bg-black text-center">
-            <img src="" alt="" className="w-full h-full object-cover" />
+        <div id="option_container" className="w-full">
+          {/* ABOUT SECTION */}
+          <div className="option-box relative flex flex-row w-full mb-4 h-[20vh] md:h-[60vh] bg-gradient-to-r from-[#c4d9f8] to-transparent text-left">
+            {/* Overlay */}
+            <div className="absolute md:w-full h-full bg-blue-300/70 hover:bg-transparent transform-translate duration-500 z-10"></div>
+
+            {/* Content */}
+            <div className="w-[60%] p-8 z-10 flex flex-col justify-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-black mb-2">
+                About
+              </h1>
+              <h2 className="text-xl md:text-2xl text-gray-700 mb-2">
+                Empowering Digital Innovation
+              </h2>
+              <p className="text-md md:text-lg text-gray-600 mb-4">
+                Learn how SoftWantage crafts software with precision and
+                passion. Our team thrives on delivering impactful digital
+                products.
+              </p>
+              <div className="flex gap-4">
+                <button className="bg-black text-white px-5 py-2 rounded hover:bg-gray-800">
+                  Know More
+                </button>
+                <button className="text-black underline hover:text-blue-600">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+
+            {/* Video */}
+            <video
+              src={About}
+              className="w-[40%] h-full object-cover z-0"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
           </div>
 
+          {/* SOFTWARE SOLUTIONS + TALENT DEVELOPMENT */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div className="option-box h-[20vh] md:h-[40vh] bg-red-600 text-center">
-              <img src="" alt="" className="w-full h-full object-cover" />
+            {/* SOFTWARE SOLUTIONS */}
+            <div className="option-box relative flex flex-row w-full h-[20vh] md:h-[60vh] bg-gradient-to-r from-[#89CFF0] to-[#1D4ED8] text-left">
+              <div className="absolute md:w-full h-full bg-blue-500/70 hover:bg-transparent transform-translate duration-500 z-10"></div>
+              <div className="w-[60%] p-8 z-10 flex flex-col justify-center">
+                <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  Software Solutions
+                </h1>
+                <h2 className="text-lg md:text-xl text-white mb-2">
+                  Digital craftsmanship at scale
+                </h2>
+                <p className="text-white text-md md:text-lg mb-4">
+                  We create scalable web and mobile apps for enterprises and
+                  startups alike—blending UX, data, and engineering.
+                </p>
+                <div className="flex gap-4">
+                  <button className="bg-white text-black px-5 py-2 rounded hover:bg-gray-300">
+                    Explore
+                  </button>
+                </div>
+              </div>
+              <video
+                src={SoftwareSolution}
+                className="w-[40%] h-full object-cover z-0"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
             </div>
-            <div className="option-box h-[20vh] md:h-[40vh] bg-green-600 text-center">
-              <img src="" alt="" className="w-full h-full object-cover" />
+
+            {/* TALENT DEVELOPMENT */}
+            <div className="option-box relative flex flex-row w-full h-[20vh] md:h-[60vh] bg-gradient-to-r from-[#cfd9df] to-[#e2ebf0] text-left">
+              <div className="absolute md:w-full h-full bg-gray-500/70 hover:bg-transparent transform-translate duration-500 z-10"></div>
+              <div className="w-[60%] p-8 z-10 flex flex-col justify-center">
+                <h1 className="text-3xl md:text-4xl font-bold text-black mb-2">
+                  Talent Development
+                </h1>
+                <h2 className="text-lg md:text-xl text-gray-700 mb-2">
+                  Nurturing the next tech leaders
+                </h2>
+                <p className="text-gray-600 text-md md:text-lg mb-4">
+                  Training and mentoring for engineers, designers, and
+                  innovators who want to make a difference.
+                </p>
+                <div className="flex gap-4">
+                  <button className="bg-black text-white px-5 py-2 rounded hover:bg-gray-800">
+                    Join Us
+                  </button>
+                </div>
+              </div>
+              <video
+                src={Tech}
+                className="w-[40%] h-full object-cover z-0"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
             </div>
           </div>
 
-          <div className="option-box w-full md:w-full h-[20vh] md:h-[40vh] bg-yellow-600 text-center">
-            <img src="" alt="" className="w-full h-full object-cover" />
+          {/* CONTACT SECTION */}
+          <div className="option-box relative flex flex-row w-full h-[20vh] md:h-[60vh] bg-gradient-to-r from-[#000000] to-transparent text-left">
+            <div className="absolute md:w-full h-full bg-gray-600/70 hover:bg-transparent transform-translate duration-500 z-10"></div>
+            <div className="w-[60%] p-8 z-10 flex flex-col justify-center">
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                Contact
+              </h1>
+              <h2 className="text-lg md:text-xl text-white mb-2">
+                Let's Build Something Together
+              </h2>
+              <p className="text-white text-md md:text-lg mb-4">
+                Reach out to us for collaborations, partnerships, or simply to
+                say hi.
+              </p>
+              <div className="flex gap-4">
+                <button className="bg-white text-black px-5 py-2 rounded hover:bg-gray-300">
+                  Get in Touch
+                </button>
+              </div>
+            </div>
+            <video
+              src={Contact}
+              className="w-[40%] h-full object-cover z-0"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
           </div>
         </div>
       </section>
 
-      <section data-scroll-section>
+      <section data-scroll-section className="bg-black text-white">
         <Footer />
       </section>
     </div>

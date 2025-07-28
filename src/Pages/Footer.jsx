@@ -1,109 +1,85 @@
 import React from "react";
-import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer = () => {
   return (
-    <footer
-      className="w-full bg-gray-900 text-gray-100 px-6 py-12"
-      data-scroll-section
-    >
-      <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-3 gap-10">
-        {/* 🟢 Quick Links */}
+    <footer className="w-full md:mt-40 md:h-[40vh] bg-black text-white px-6 py-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        {/* Company Info */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
-          <ul className="space-y-2 text-[10px] md:text-sm">
+          <h2 className="text-xl font-bold mb-2">SoftWantage</h2>
+          <p className="text-gray-400 text-sm">
+            © 2025 SoftWantage. All rights reserved.
+          </p>
+          <p className="mt-2 text-sm">📞 +91 98765 43210</p>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h2 className="text-lg font-semibold mb-3">Quick Links</h2>
+          <ul className="space-y-2 text-sm">
             <li>
-              <a href="/" className="hover:text-teal-400 transition">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="hover:text-teal-400 transition">
+              <Link to="/about" className="hover:text-blue-400">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/career" className="hover:text-teal-400 transition">
-                Careers
-              </a>
+              <Link to="/software-solutions" className="hover:text-blue-400">
+                Software
+              </Link>
             </li>
             <li>
-              <a
-                href="/software-solution"
-                className="hover:text-teal-400 transition"
-              >
-                Solutions
-              </a>
+              <Link to="/talent-development" className="hover:text-blue-400">
+                Talent
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-teal-400 transition">
+              <Link to="/contact" className="hover:text-blue-400">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
-        {/* 🟡 Contact Info */}
+        {/* Social Media */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
-          <ul className="text-[10px] md:text-sm space-y-2">
+          <h2 className="text-lg font-semibold mb-3">Follow Us</h2>
+          <ul className="space-y-2 text-sm">
             <li>
-              📞{" "}
-              <a href="tel:+918765432100" className="hover:text-teal-400">
-                +91 87654 32100
-              </a>
-            </li>
-            <li>
-              ✉️{" "}
               <a
-                href="mailto:info@yourcompany.com"
-                className="hover:text-teal-400"
+                href="https://instagram.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-400"
               >
-                info@yourcompany.com
+                Instagram
               </a>
             </li>
-            <li>📍 123 Tech Street, Bangalore, India</li>
+            <li>
+              <a
+                href="https://twitter.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-300"
+              >
+                LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
-
-        {/* 🔵 Social Media */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
-          <div className="flex space-x-4 text-2xl">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-pink-500 transition"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-blue-400 transition"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-blue-600 transition"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer Bottom Text */}
-      <div className="mt-10 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} Your Company Name. All rights reserved.
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
