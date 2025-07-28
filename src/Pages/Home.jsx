@@ -6,6 +6,7 @@ import Image1 from "../assets/image1.jpeg";
 import Bg from "../assets/HB.jpg";
 import Soft from "../assets/Soft.jpg";
 import Talent from "../assets/Talent.jpg";
+import Footer from "../Pages/Footer.jsx";
 
 function Home() {
   const scrollRef = useRef(null);
@@ -225,6 +226,7 @@ function Home() {
           />
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
