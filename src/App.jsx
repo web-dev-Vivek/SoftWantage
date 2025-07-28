@@ -9,7 +9,6 @@ import TalentDevelopment from "./Pages/Talentdevlopment";
 import SoftwareSolution from "./Pages/Softwaresolution";
 import Contact from "./Pages/Contact";
 import Header from "./Pages/Header.jsx";
-import Footer from "./Pages/Footer.jsx";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
       <Header />
 
       {/* ✅ Page routes */}
-      <main>
+      <main className="overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

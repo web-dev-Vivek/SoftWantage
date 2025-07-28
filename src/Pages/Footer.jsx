@@ -7,11 +7,11 @@ function Footer() {
       className="w-full bg-gray-900 text-gray-100 px-6 py-12"
       data-scroll-section
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-3 gap-10">
         {/* 🟢 Quick Links */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-[10px] md:text-sm">
             <li>
               <a href="/" className="hover:text-teal-400 transition">
                 Home
@@ -46,7 +46,7 @@ function Footer() {
         {/* 🟡 Contact Info */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
-          <ul className="text-sm space-y-2">
+          <ul className="text-[10px] md:text-sm space-y-2">
             <li>
               📞{" "}
               <a href="tel:+918765432100" className="hover:text-teal-400">
