@@ -28,7 +28,9 @@ const Contact = () => {
           Contact Section
         </h2>
       </section>
-      <Footer />
+      <section data-scroll-section className="bg-black text-white">
+        <Footer />
+      </section>
     </div>
   );
 };

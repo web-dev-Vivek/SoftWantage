@@ -75,7 +75,7 @@ const TalentDevelopment = () => {
       </section>
 
       {/* Footer (inside scroll section if it should animate too) */}
-      <section data-scroll-section>
+      <section data-scroll-section className="bg-black text-white">
         <Footer />
       </section>
     </div>
