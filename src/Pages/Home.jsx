@@ -156,7 +156,12 @@ function Home() {
             style={{ fontFamily: "'Oswald', sans-serif" }}
           >
             Empowering businesses and{" "}
-            <span className="font-bold text-[rgb(1,152,178)]">individuals</span>{" "}
+            <span
+              className="font-bold text-[rgb(1,152,178)]"
+              style={{ fontFamily: "'DM Serif Text', serif" }}
+            >
+              individuals
+            </span>{" "}
             to grow.
           </p>
         </div>

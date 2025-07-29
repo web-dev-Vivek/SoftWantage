@@ -22,11 +22,32 @@ const Career = () => {
       <section
         id="career"
         data-scroll-section
-        className="min-h-screen flex justify-center items-center bg-purple-200"
+        className="min-h-screen flex flex-col justify-start items-center bg-purple-200"
       >
-        <h2 className="text-4xl" data-scroll data-scroll-speed="1">
-          Career Section
-        </h2>
+        <div
+          className="text-8xl font-bold md:mt-30 text-blue-500"
+          style={{ fontFamily: "'DM Serif Text', serif" }}
+        >
+          Career
+        </div>
+        <div className="w-screen flex flex-col md:mt-30 justify-center items-center ">
+          <h1
+            className="text-6xl mb-5 "
+            style={{ fontFamily: "'DM Serif Text', serif" }}
+          >
+            We are hiring
+          </h1>
+          <p className="text-2xl">
+            Please send your detailed resumes at{"  "}
+            <a
+              className="text-blue-600"
+              href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=support@softwantage.com"
+            >
+              support@softwantage.com{" "}
+            </a>
+            for various openings
+          </p>
+        </div>
       </section>
       <section data-scroll-section className="bg-black text-white">
         <Footer />

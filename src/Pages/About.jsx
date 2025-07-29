@@ -43,9 +43,12 @@ const About = () => {
             About us
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-10 text-[#0b7363]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 p-10 text-[#0b7363]">
           <div className="">
-            <h3 className="md:mb-4 font-semibold text-3xl text-center">
+            <h3
+              className="md:mb-4 font-semibold text-3xl text-center"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+            >
               Technology meets Talent
             </h3>
             <p className="text-lg">
